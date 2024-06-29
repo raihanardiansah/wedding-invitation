@@ -13,36 +13,7 @@ body {
   color: rgb(145, 110, 110);
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  min-height: 100vh;
-  position: relative;
-  background-color:   white;
-  ;
-}
 
-
-.hero h1 {
-  font-family:'Crimson Text';
-  font-size: 4rem;
-  z-index: 1;
-}
-
-.hero button {
-  margin-top: 4px;
-  color:#e4d198;
-  background-color: rgb(145, 110, 110);
-  font-family: 'Crimson Text' ;
-  box-shadow: var(--shadow) ;
-  z-index: 1;
-}
-
-.hero button:hover {
-  background-color: beige;
-  color:black;
-  z-index: 1;
-}
 
 /* Navbar */
 .mynavbar {
