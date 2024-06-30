@@ -130,7 +130,8 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
-          <p class="alamat">Alamat: Gedung 7 Amikom <br> Jalan in aja dulu,,Sleman, Yogyakarta</p>
+          <p class="alamat">Alamat: Gedung 7 Amikom <br> Jl. Nusa Indah, Condongcatur, Kec. Depok, Kabupaten
+            Sleman,<br>Daerah Istimewa Yogyakarta</p>
           <a href="https://maps.app.goo.gl/RFTPHGL1Phz1qjrW9" target="_blank"
             class="btn btn-bd-primary btn-sm my-3">Klik
             untuk membuka peta</a>
@@ -142,7 +143,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.08053980010936!2d110.4086732677824!3d-7.7591820116936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59e1ba0689fb%3A0xf7522b97c83bd0f9!2sUniversitas%20amikom%20Yogyakarta!5e0!3m2!1sid!2sid!4v1719296095344!5m2!1sid!2sid"
             width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <p class="description">Simpan Petunjuk Jalan Agar Tidak Salah Tujuan</p>
+          <p class="description">Simpan Alamat Agar Tidak Salah Tujuan</p>
         </div>
       </div>
     </div>
@@ -195,24 +196,52 @@
       <h2>RSVP</h2>
     </div>
     <div class="row justify-content-center">
-      <h3><i>Silahkan Mengisi Form Konfirmasi Kehadiran</i></h3>
+      <h5>Silahkan Mengisi Form Konfirmasi Kehadiran</h5>
       <div class="container">
         <form action="/action_page.php" method="POST">
-          <label for="name">Nama</label>
-          <input type="text" id="name" name="nama" placeholder="nama anda..">
+          <div class="row justify-content-center">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="nama" placeholder="nama anda">
 
-          <label for="nim">Jumlah</label>
-          <input type="number" id="jumlah" name="jumlah" placeholder="max 5 orang">
+            <label for="jumlah">Jumlah</label>
+            <input type="number" id="jumlah" name="jumlah" max="5" min="1" placeholder="max 5 orang">
 
-          <label for="hadir">Kehadiran</label>
-          <select name="hadir">
-            <option value="pilih" selected>-Pilih Salah Satu-</option>
-            <option value="hadir">Hadir</option>
-            <option value="tidak">Tidak Hadir</option>
-          </select>
-          <input type="submit" value="Konfirmasi Kehadiran">
-
+            <label for="hadir">Kehadiran</label>
+            <select name="hadir">
+              <option value="pilih" selected>-Pilih Salah Satu-</option>
+              <option value="hadir">Hadir</option>
+              <option value="tidak">Tidak Hadir</option>
+            </select>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-4">
+              <!-- <input type="submit" class="btn btn-lg" value="Konfirmasi Kehadiran"> -->
+              <button type="submit" class="btn btn-lg">Konfirmasi Kehadiran</button>
+            </div>
+          </div>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="message" class="message">
+    <h1 class="text-center mb-4">Pesan untuk Pengantin</h1>
+    <div class="row justify-content-center">
+      <div class="container">
+        <form id="messageForm">
+          <div class="mb-3">
+            <label for="senderName" class="form-label">Nama Anda:</label>
+            <input type="text" class="form-control" id="senderName" name="senderName" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Pesan Anda:</label>
+            <textarea class="form-control" id="messageuser" name="messageuser" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+        <div id="messageDisplay" class="mt-4">
+          <!-- Pesan akan ditampilkan di sini -->
+        </div>
       </div>
     </div>
   </section>
@@ -242,6 +271,47 @@
           })
       });
     });
+  </script>
+
+  <!-- Javascript untuk message -->
+  <script>
+    const messageForm = document.getElementById('messageForm');
+    const messageDisplay = document.getElementById('messageDisplay');
+
+    messageForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const senderName = document.getElementById('senderName').value;
+      const message = document.getElementById('messageuser').value;
+
+      const options = {
+        day: 'numeric',
+        month: 'short',
+        hour: 'numeric',
+        minute: 'numeric'
+      };
+      const timestamp = new Date().toLocaleString('id-ID', options);
+
+      // Hilangkan tanda kurung dari timestamp
+      const formattedTimestamp = timestamp.replace(/[\(\)]/g, '');
+
+      // Buat elemen untuk menampilkan pesan dengan tanggal dan waktu
+      const messageElement = document.createElement('div');
+      messageElement.innerHTML = `
+        <div class="card-body">
+            <h5 class="card-title">${senderName}</h5>
+            <p class="card-text">${message}</p>
+            <p class="card-text"><small class="text-date">${formattedTimestamp}</small></p>
+        </div>
+    `;
+
+      // Tambahkan pesan ke dalam div messageDisplay
+      messageDisplay.insertBefore(messageElement, messageDisplay.firstChild);
+
+      // Reset form setelah submit
+      messageForm.reset();
+    });
+
   </script>
 
 </body>

@@ -1,6 +1,7 @@
 :root {
-  --abu: #1A2647;
-  --bg:   #fdfdfd ;
+  --marron: #502b2b;
+  --bg: #e0e0e0 ;
+  --gold: #e4d198;
   --shadow: 0 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -18,7 +19,7 @@ body {
     text-align: center;
     min-height: 100vh;
     position: fixed;
-    background-color: rgb(80, 43, 43);
+    background-color: var(--marron);
     max-height: 100vh;
     color: #fffefb;
   }
@@ -33,7 +34,7 @@ body {
   .hero a {
     margin-top: 3rem;
     color: rgb(28, 27, 31);
-    background-color: rgb(253, 253, 253);
+    background-color: #dbbe66;
     font-family: 'Crimson Text' ;
     box-shadow: var(--shadow) ;
     z-index: 1;
@@ -42,8 +43,8 @@ body {
   .hero a:hover {
     transform: scale(0.9);
     transition: 0.2s linear;
-    background-color: rgb(48, 48, 43);
-    color:#fffefb;
+    background-color: #dab74f;
+    color:rgb(28, 27, 31);
     z-index: 1;
   }
 
@@ -82,7 +83,7 @@ body {
 
 .home {
   /* background-image: url(img/R.jpeg); */
-  background-color: rgb(80, 43, 43) ;
+  background-color: var(--marron) ;
   background-size: cover;
   min-height: 100vh;
   padding-top: 7rem;
@@ -92,7 +93,7 @@ body {
 .home h2 {
   font-family:'Crimson Text';
   font-size: 3rem;
-  color: #e4d198;
+  color: var(--gold);
 }
 
 .home p {
@@ -101,7 +102,7 @@ body {
 .home h4 {
   font-family:'Crimson Text';
   font-size: 2rem;
-  color: #e4d198;
+  color: var(--gold);
 }
 
 /* Info */
@@ -111,59 +112,80 @@ body {
 }
 .info h2{
   font-family:'Crimson Text';
+  /* color: #1A2647; */
+  color: var(--marron);
 }
 .info .alamat {
   font-size: 18px;
-  color: beige;
+  color: var(--marron);
 }
 .info .btn-bd-primary {
   margin-top: 4px;
-  color:black;
-  background-color: silver;
-  font-family: 'Crimson Text' ;
+  color: #ffffff;
+  background-color: var(--marron);
   box-shadow: var(--shadow) ;
   z-index: 1;
 }
 .info .btn-bd-primary:hover {
-  background-color: rgb(43, 26, 26);
-  color:silver;
+  transform: scale(0.9);
+  transition: 0.2s linear;
+  background-color: #703232;
+  color: #ffffff;
   z-index: 1;
 }
 .info .description {
-  color: rgb(145, 110, 110);
+  color: var(--marron);
+  font-size: 0.9rem;
 }
 .card {
   background-color: #e4d198;
   border: 1px solid silver;
   box-shadow: var(--shadow);
+  color: var(--marron);
+}
+.card span {
+  color: var(--marron);
 }
 .card-header {
   background-color: rgba(0, 0, 0, 0.171);
-  color: rgb(145, 110, 110);
+  color: rgb(82, 37, 37);
   font-weight: bold;
+}
+
+/* Gallery */
+.gallery {
+  background-color: var(--marron);
+  padding: 5rem 10rem;
+}
+
+.gallery h2, span {
+  font-family:'Crimson Text';
+  color: var(--gold);
 }
 
 
 /*RSVP*/
 .rsvp {
-  background-color: rgb(145, 110, 110);
-  border-radius: 20px;
-  background-color: #e4d198;
-  color: rgb(145, 110, 110);
-  padding: 5px;
-  margin: 100px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 5.2rem 10rem;
 }
 
 .rsvp .container {
-  margin: 10px;
-  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--marron);
+  color: var(--gold);
+  padding: 1.5rem;
 }
-.rsvp h3 {
-  color: beige;
-  text-align: center ;
-  margin-top: 70px;
+
+.rsvp h2 {
   font-family: 'Crimson Text';
+  color: var(--marron);
+}
+
+.rsvp h5 {
+  color: #333332;;
+  text-align: center ;
+  margin-top: 0.8rem;
+  font-family: 'Lucida Sans';
 }
 .rsvp input[type=text], [type=number], select {
   width: 100%;
@@ -175,24 +197,105 @@ body {
   box-sizing: border-box;
 }
 
-.rsvp input[type=submit],[type=reset] {
-  width: 30%;
-  background-color: rgb(145, 110, 110);
-  color: beige;
-  padding: 10px 12px;
-  margin: 10px 35%;
+.rsvp [type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Crimson Text';
+  margin-top: 3rem;
+  color: rgb(28, 27, 31);
+  background-color: #dbbe66;
+  font-family: 'Crimson Text' ;
+  box-shadow: var(--shadow) ;
 }
 
-.rsvp [type=submit]:hover,[type=reset]:hover {
+.rsvp [type=submit]:hover {
   background-color: rgb(145, 110, 110);
 
 }
 
+/* Message */
 
+.message {
+  margin: 5rem 10rem;
+  padding: 0.8rem;
+
+}
+
+.message .container {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message h1 {
+  text-align: center;
+  color: #333;
+}
+
+.message form {
+  margin-bottom: 1.5rem;
+}
+
+.message label {
+  font-weight: bold;
+}
+
+.message input[type="text"],
+textarea {
+  width: 100%;
+  padding: o.5rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.message .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.message .btn:hover {
+  background-color: #45a049;
+}
+
+.message #messageDisplay {
+  margin-top: 20px;
+}
+
+.message .card-body {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.message .card-body .text-date {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.message .card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.message .card-body .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* Media Query */
 /* Laptop */
 @media (max-width: 992px) {
   html {
@@ -220,7 +323,6 @@ body {
   .mynavbar .navbar-nav {
     font-size: 1.8rem;
     text-align: center;
-    
   }
   iframe {
     width: 80%;
@@ -228,6 +330,9 @@ body {
   }
   .info .alamat {
   padding-top: 1.5rem;
+  }
+  .gallery {
+    padding: 5rem 5rem;
   }
 }
 
