@@ -46,7 +46,7 @@
             <a class="nav-link" href="#info">INFO</a>
             <a class="nav-link" href="#gallery">GALLERY</a>
             <a class="nav-link" href="#rsvp">RSVP</a>
-            <a class="nav-link" href="#pesan">MESSAGGE</a>
+            <a class="nav-link" href="#message">MESSAGE</a>
           </div>
         </div>
       </div>
@@ -192,58 +192,97 @@
   <!--Form-->
   <!--RSVP (Menggunakan bootstrap)-->
   <section id="rsvp" class="rsvp">
-    <div class="text-center">
-      <h2>RSVP</h2>
-    </div>
-    <div class="row justify-content-center">
-      <h5>Silahkan Mengisi Form Konfirmasi Kehadiran</h5>
-      <div class="container">
-        <form action="/action_page.php" method="POST">
-          <div class="row justify-content-center">
-            <label for="name">Nama</label>
-            <input type="text" id="name" name="nama" placeholder="nama anda">
+    <div class="container">
+      <div class="text-center">
+        <h2>RSVP</h2>
+      </div>
+      <div class="row justify-content-center">
+        <h5>Silahkan Mengisi Form Konfirmasi Kehadiran</h5>
+        <div class="card">
+          <form action="/action_page.php" method="POST">
+            <div class="row justify-content-center">
+              <label for="name">Nama :</label>
+              <input type="text" class="form-control" id="name" name="nama" placeholder="nama anda">
 
-            <label for="jumlah">Jumlah</label>
-            <input type="number" id="jumlah" name="jumlah" max="5" min="1" placeholder="max 5 orang">
+              <label for="jumlah">Jumlah :</label>
+              <input type="number" class="form-control" id="jumlah" name="jumlah" max="5" min="1"
+                placeholder="max 5 orang">
 
-            <label for="hadir">Kehadiran</label>
-            <select name="hadir">
-              <option value="pilih" selected>-Pilih Salah Satu-</option>
-              <option value="hadir">Hadir</option>
-              <option value="tidak">Tidak Hadir</option>
-            </select>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-8 text-center">
-              <button type="submit" class="btn btn-lg">Konfirmasi Kehadiran</button>
+              <label for="hadir">Kehadiran :</label>
+              <select name="hadir" class="form-control">
+                <option value="pilih" selected>-Pilih Salah Satu-</option>
+                <option value="hadir">Hadir</option>
+                <option value="tidak">Tidak Hadir</option>
+              </select>
             </div>
-          </div>
-        </form>
+            <div class="row justify-content-center">
+              <div class="col-8 text-center">
+                <button type="submit" class="btn btn-lg">Konfirmasi Kehadiran</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="message" class="message">
-    <h1 class="text-center mb-4">Pesan untuk Pengantin</h1>
-    <div class="row justify-content-center">
-      <div class="container">
-        <form id="messageForm">
-          <div class="mb-3">
-            <label for="senderName" class="form-label">Nama Anda:</label>
-            <input type="text" class="form-control" id="senderName" name="senderName" required>
-          </div>
-          <div class="mb-3">
-            <label for="messageuser" class="form-label">Pesan Anda:</label>
-            <textarea class="form-control" id="messageuser" name="messageuser" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn">Kirim Pesan</button>
-        </form>
-        <div id="messageDisplay" class="mt-4">
-          <!-- Pesan akan ditampilkan di sini -->
+    <div class="container">
+      <h1 class="text-center mb-4">Message</h1>
+      <div class="row justify-content-center">
+        <div class="container mycard">
+          <form id="messageForm">
+            <div class="mb-3">
+              <label for="senderName" class="form-label">Nama :</label>
+              <input type="text" class="form-control" id="senderName" name="senderName" required>
+            </div>
+            <div class="mb-3">
+              <label for="messageuser" class="form-label">Pesan :</label>
+              <textarea class="form-control" id="messageuser" name="messageuser" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Kirim Pesan</button>
+          </form>
         </div>
+        <div id="messageDisplay" class="mt-4">
+          <!-- Pesan muncul di sini -->
+        </div>
+
       </div>
     </div>
   </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <p>Find Us on Social Media</p>
+          <div class="social-buttons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col text-center">
+          <p>&copy; 2024 Wedding Invitation. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="audio-container">
+    <audio id="myAudio" autoplay loop>
+      <source src="audio/save-and-sound.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-icon-wrapper">
+      <a onclick="togglePlayPause()">
+        <i id="playPauseIcon" class="bi bi-play-circle"></i>
+      </a>
+    </div>
+  </div>
+
   <!-- Halaman Utama Selesai-->
 
 
@@ -311,6 +350,20 @@
       messageForm.reset();
     });
 
+  </script>
+  <script>
+    var audio = document.getElementById("myAudio");
+    var playPauseButton = document.getElementById("playPauseIcon");
+
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+        playPauseButton.className = "bi bi-pause-circle";
+      } else {
+        audio.pause();
+        playPauseButton.className = "bi bi-play-circle";
+      }
+    }
   </script>
 
 </body>

@@ -73,6 +73,7 @@ body {
   font-family:'Crimson Text'
 }
 
+
 /* Home */
 .couple img {
   width: 100%;
@@ -162,10 +163,10 @@ body {
 
 /*RSVP*/
 .rsvp {
-  padding: 5.2rem 10rem;
+  padding: 5.2rem 1.5rem;
 }
 
-.rsvp .container {
+.rsvp .card {
   border-radius: 20px;
   background-color: var(--marron);
   color: var(--gold);
@@ -188,7 +189,7 @@ body {
   width: 100%;
   padding: 0.7rem;
   border: 1px solid #2b4f70;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .rsvp [type=submit] {
@@ -213,29 +214,29 @@ body {
 /* Message */
 
 .message {
-  margin: 5rem 10rem;
-  padding: 0.8rem;
-
+  padding: 5rem 1.5rem;
+  background-color: var(--marron);
 }
 
-.message .container {
+
+.message .mycard {
   padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 1.5rem;
+  background-color: #3b1f1f;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
 }
 
 .message h1 {
-  text-align: center;
-  color: #333;
+  font-family: 'Crimson Text';
+  color: var(--gold);
 }
 
 .message form {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .message label {
-  font-weight: bold;
+  color: var(--gold);
 }
 
 .message input[type="text"],
@@ -247,8 +248,8 @@ textarea {
 }
 
 .message .btn {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #dbbe66;
+  color: rgb(28, 27, 31);
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
@@ -256,19 +257,20 @@ textarea {
 }
 
 .message .btn:hover {
-  background-color: #45a049;
+  transform: scale(0.9);
+  transition: 0.2s linear;
+  background-color: #dab74f;
 }
 
 .message #messageDisplay {
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
 .message .card-body {
   background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
   position: relative;
 }
 
@@ -283,6 +285,7 @@ textarea {
 .message .card-body p {
   margin: 0;
   font-size: 0.9rem;
+  color: #333;
 }
 
 .message .card-body .card-title {
@@ -290,6 +293,38 @@ textarea {
   font-weight: bold;
   color: #333;
 }
+
+/* Footer */
+.footer {
+  padding: 1.5rem;
+  background-color: #333;
+  color: #ccc;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}
+
+.audio-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+
+
 
 
 /* Media Query */
