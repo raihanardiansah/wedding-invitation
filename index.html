@@ -1,67 +1,341 @@
+<!--PROGRAM WEBSITE JASA UNDANGAN DIGITAL-->
+<!--HTML, CSS, BOOTSTRAP 5, JAVACRIPT-->
+<!--KELOMPOK ROMUSA-->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wedding Invitation</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <!-- Bootsrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
-
-    <!--Hitung mundur dengan JavaScript (simplyCountdownJs)-->
-    <link rel="stylesheet" href="Hitung Mundur/simplyCountdown.theme.default.css" />
-    <script src="Hitung Mundur/simplyCountdown.min.js"></script>
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Wedding Invitation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styleweb.css">
 </head>
-
-
 <body>
-    <!-- Halaman Awal Mulai-->
-    <section id="hero" class="hero w-100 h-100 p-2 mx-auto text=center d-flex
-  justify-content-center align-items-center ">
-        <main>
-            <img src="img/top.png" alt="1"> </br> </br>
-            <h5><i>You Are Invited to </br></h5>
-            <h2>The Wedding Of</i></h2>
-            <h1>Richard & Lily</h1>
-            <p><i>Akan Dilangsungkan Dalam :</i></p>
-            <div class="simply-countdown"></div>
-            <a href="utama.html" id="open-invitation" class="btn btn-lg">Buka Undangan</a> </br> </br>
-            <img src="img/bottom.png" alt="2">
-        </main>
-    </section>
-    <!-- Halaman Awal Selesai-->
 
-    <!--JavaScript untuk Hitung Mundur-->
-    <script>
-        simplyCountdown('.simply-countdown', {
-            year: 2024, // required
-            month: 7, // required
-            day: 28, // required
-            hours: 8, // Default is 0 [0-23] integer
-            words: { //words displayed into the countdown
-                days: { singular: 'hari', plural: 'hari' },
-                hours: { singular: 'jam', plural: 'jam' },
-                minutes: { singular: 'menit', plural: 'menit' },
-                seconds: { singular: 'detik', plural: 'detik' }
-            },
-        });
-    </script>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark main-color">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="brand me-auto">
+        <a class="navbar-brand " href="#"><i><b>Digi<span class="nav-span">Invite</span>.</b></i></a>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item me-5">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="#fitur">Feature</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="#katalog">Katalog</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" aria-disabled="true" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Home-->
+  <section id="home" class="home">
+    <div class="container">
+      <div class="content-home">
+        <div class="row content-home2">
+          <div class="col-lg-7 col-md-5">
+             <div class="box-container">
+              <h1 class="home-heading">Ciptakan momen tak terlupakan dengan <span class="home-span"> Undangan Digital</span></h1>
+            <p>
+              Buat undangan digital dengan Digi Invite untuk temukan bagaimana undangan pernikahan digital kami dapat mengubah cara 
+              Anda merayakan cinta Anda dengan cara yang lebih modern dan berkelanjutan.
+
+            </p>
+             </div>
+             <div class="btn-home">
+            <a href="form.html" class="home-links">Custom Sekarang</a>
+          </div>
+          </div>
+          <div class="col-lg-5 col-md-7">
+           <div class="box-container2">
+            <img src="img/hp.png" class="img-home" alt="banner img">
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--About Us-->
+  <section id="about" class="about" >
+  <div class="container">
+    <div class="about-us-container">
+      <div class="about-us">
+        <div class="row">
+          <div class="col-lg-6 ">
+            <div class="content-about ">
+              <h3 class="heading-about">About Us</h3>
+              <p class="para-about">
+                Kami hadir untuk membuat proses menciptakan undangan pernikahan digital 
+                menjadi mudah dan menyenangkan bagi Anda. Dengan platform kami yang intuitif, 
+                Anda dapat dengan cepat dan mudah membuat undangan yang sesuai dengan gaya dan tema pernikahan Anda. 
+                Yang lebih menarik, kami menawarkan harga yang terjangkau tanpa mengorbankan kualitas, 
+                sehingga Anda bisa merencanakan pernikahan impian Anda tanpa stres atas anggaran. 
+                <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+                  <div class="col mt-3">
+                    <div class="card" style="width: 12rem;" >
+                    <img src="img/1.png" class="card-img-top" alt="img1">
+                    <div class="card-body">
+                      <p>Harga Terbaik</p>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="col mt-3">
+                    <div class="card" style="width: 12rem;" >
+                    <img src="img/2.png" class="card-img-top" alt="img2">
+                    <div class="card-body">
+                      <p>Kreatif</p>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="col mt-3">
+                    <div class="card" style="width: 12rem;" >
+                    <img src="img/3.png" class="card-img-top" alt="img3">
+                    <div class="card-body">
+                      <p>Proses Cepat</p>
+                  </div>
+                   </div>
+                    </div>
+            
+                </div>
+
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Feature-->
+  <section id="fitur" class="fitur">
+    <div class="container">
+      <div class="row">
+        <h3 class="heading-fitur">Feature</h3>
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+    <div class="col mt-3">
+    <div class="card" style="width: 12rem;" >
+      <img src="img/responsive.png" class="card-img-top" alt="responsive">
+      <div class="card-body">
+        <p class="card-text">Responsive Mobile Frendly</p>
+      </div>
+    </div>
+    </div>
+    <div class="col mt-3">
+    <div class="card" style="width: 12rem;">
+      <img src="img/info.png" class="card-img-top" alt="info">
+      <div class="card-body">
+        <p class="card-text">Informasi Pasangan</p>
+      </div>
+    </div>
+    </div>
+    <div class="col mt-3">
+      <div class="card" style="width: 12rem;">
+        <img src="img/countdown.png" class="card-img-top" alt="countdown">
+        <div class="card-body">
+          <p class="card-text">Countdown Wedding</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mt-3">
+      <div class="card" style="width: 12rem;">
+        <img src="img/location.png" class="card-img-top" alt="location">
+        <div class="card-body">
+          <p class="card-text">Maps Lokasi</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mt-3">
+      <div class="card" style="width: 12rem;">
+        <img src="img/gallery.png" class="card-img-top" alt="gallery">
+        <div class="card-body">
+          <p class="card-text">Galeri Foto Pasangan</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mt-3">
+      <div class="card" style="width: 12rem;">
+        <img src="img/song.png" class="card-img-top" alt="song">
+        <div class="card-body">
+          <p class="card-text">Lagu Pernikahan</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mt-3">
+      <div class="card" style="width: 12rem;">
+        <img src="img/rsvp.png" class="card-img-top" alt="rsvp">
+        <div class="card-body">
+          <p class="card-text">RSVP</p>
+        </div>
+      </div>
+    </div>
+      <div class="col mt-3">
+        <div class="card" style="width: 12rem;">
+          <img src="img/pesan.png" class="card-img-top" alt="pesan">
+          <div class="card-body">
+            <p class="card-text">Pesan Untuk Mempelai</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!--Katalog-->
+  <section id="katalog" class="katalog">
+    <div class="container">
+        <div class="row">
+          <h3 class="heading-katalog">Katalog</h3>
+      <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+      <div class="col mt-2">
+      <div class="card" style="width: 12rem;" >
+        <img src="img/hp2.png" class="card-img-top" alt="hp1">
+        <div class="card-body">
+          <a href="contoh 1/FINAL PROJECT 2/FINAL PROJECT/index.html" class="btn ">Lihat Contoh</a>
+        </div>
+      </div>
+      </div>
+      <div class="col mt-3">
+      <div class="card" style="width: 12rem;">
+        <img src="img/hp1.png" class="card-img-top" alt="hp2info">
+        <div class="card-body">
+          <a href="contoh 2/Index 2 FP/index.html" class="btn">Lihat Contoh</a>
+        </div>
+      </div>
+      </div>
+      <div class="col mt-1">
+        <div class="card" style="width: 12rem;">
+          <img src="img/hp3.png" class="card-img-top" alt="hp3">
+          <div class="card-body">
+            <a href="contoh 2/Index 2 FP/index.html" class="btn ">Lihat Contoh</a>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+    </div>
+  </section>
+ 
+  <!--Pricing-->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <div class="row">
+        <h3 class="heading-pricing">Pricing</h3>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h3 class="my-0 fw-normal">Reguler</h3>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">Rp50.000,00</h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Foto Pasangan</li>
+                <li>Countdown Acara</li>
+                <li>Responsive</li>
+                <li>Pesan Untuk Mempelai</li>
+              </ul>
+              <div class="btn">
+                <a href="form.html" class="order">Pesan</a>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Pro</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">Rp75.000,00</h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Foto Pasangan</li>
+                <li>Countdown Acara</li>
+                <li>Responsive</li>
+                <li>Pesan Untuk Mempelai</li>
+                <li>Lagu</li>
+                <li>Galeri 3 foto</li>
+              </ul>
+              <div class="btn">
+                <a href="form.html" class="order">Pesan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm ">
+            <div class="card-header py-3 ">
+              <h4 class="my-0 fw-normal">Premium</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">Rp100.000,00</h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Foto Pasangan</li>
+                <li>Countdown Acara</li>
+                <li>Responsive</li>
+                <li>Pesan Untuk Mempelai</li>
+                <li>Lagu</li>
+                <li>Galeri 6-9 foto</li>
+                <li>RSVP</li>
+                <li>Maps Lokasi</li>
+              </ul>
+              <div class="btn">
+                <a href="form.html" class="order">Pesan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+      </div>
+    </div>
+
+  </section>
+
+  <!--FOOTER-->
+  <section id="contact" class="footer">
+    <div class="container">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <img src="img/facebook.png"> @digiInvite
+    <img src="img/instagram.png"> @digiInvite_id
+    <img src="img/tik-tok.png">  @digiInvite
+    <img src="img/twitter.png"> @digiInvite.
+  </div>
+  </section>
+
+
+
+
+ <!-- Bootstrap Javacript -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ crossorigin="anonymous"></script>
+
 </body>
-
 </html>

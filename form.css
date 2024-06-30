@@ -1,0 +1,30 @@
+/* Body */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    background: beige;
+    height: 2000px;
+}
+.main-color {
+    color:#2b4f70 !important;
+}
+.navbar{
+    background-color: #9b8061;
+    position: relative;
+}
+.navbar-brand{
+    color:beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.nav-span {
+    color:#2b4f70;
+}
+.btn {
+    color: beige;
+    background-color: #2b4f70;
+
+}
+.btn:hover {
+    background-color: #9b8061;
+}
