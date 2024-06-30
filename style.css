@@ -1,0 +1,383 @@
+:root {
+  --marron: #502b2b;
+  --bg: #e0e0e0 ;
+  --gold: #e4d198;
+  --shadow: 0 2px 2px rgb(0, 0, 0, 0.5);
+}
+
+
+body {
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+  /* min-height: 5000px; */
+  background-color: var(--bg);
+  color: rgb(202, 194, 194);
+}
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    min-height: 100vh;
+    position: fixed;
+    background-color: var(--marron);
+    max-height: 100vh;
+    color: #fffefb;
+  }
+  
+  
+  .hero h1 {
+    font-family:'Crimson Text';
+    font-size: 4rem;
+    z-index: 1;
+  }
+  
+  .hero a {
+    margin-top: 3rem;
+    color: rgb(28, 27, 31);
+    background-color: #dbbe66;
+    font-family: 'Crimson Text' ;
+    box-shadow: var(--shadow) ;
+    z-index: 1;
+  }
+  
+  .hero a:hover {
+    transform: scale(0.9);
+    transition: 0.2s linear;
+    background-color: #dab74f;
+    color:rgb(28, 27, 31);
+    z-index: 1;
+  }
+
+/* Navbar */
+.mynavbar {
+  background-color: rgba(34, 0, 0, 0.5) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas{
+  background-color:  rgb(145, 110, 110)  ;
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  /* font-family: "Noto Serif", serif; */
+  font-family:'Crimson Text';
+  font-size: 2.2rem;
+  color: beige;
+}
+
+.mynavbar .nav-link  {
+  color: #fffefb;
+  font-size: 1rem;
+  font-family:'Crimson Text'
+}
+
+
+/* Home */
+.couple img {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.home {
+  /* background-image: url(img/R.jpeg); */
+  background-color: var(--marron) ;
+  min-height: 100vh;
+  padding-top: 7rem;
+  font-size: 1rem;
+}
+
+.home h1 {
+  font-family:'Crimson Text';
+  color: var(--gold);
+}
+
+.home p {
+  color: rgb(206, 206, 206);
+}
+.home h2 {
+  font-family:'Crimson Text';
+  color: var(--gold);
+}
+
+/* Info */
+.info {
+  padding: 80px 0;
+  background-color: var(--bg);
+}
+.info h2{
+  font-family:'Crimson Text';
+  color: var(--marron);
+}
+.info .alamat {
+  font-size: 18px;
+  color: var(--marron);
+}
+.info .btn-bd-primary {
+  margin-top: 4px;
+  color: #ffffff;
+  background-color: var(--marron);
+  box-shadow: var(--shadow) ;
+  z-index: 1;
+}
+.info .btn-bd-primary:hover {
+  transform: scale(0.9);
+  transition: 0.2s linear;
+  background-color: #381818;
+  color: #ffffff;
+  z-index: 1;
+}
+.info .description {
+  color: var(--marron);
+  font-size: 0.9rem;
+}
+.card {
+  background-color: #e4d198;
+  border: 1px solid silver;
+  box-shadow: var(--shadow);
+  color: var(--marron);
+}
+.card span {
+  color: var(--marron);
+}
+.card-header {
+  background-color: rgba(0, 0, 0, 0.171);
+  color: rgb(82, 37, 37);
+  font-weight: bold;
+}
+
+/* Gallery */
+.gallery {
+  background-color: var(--marron);
+  padding: 5rem 10rem;
+}
+
+.gallery h2, span {
+  font-family:'Crimson Text';
+  color: var(--gold);
+}
+
+
+/*RSVP*/
+.rsvp {
+  padding: 5.2rem 1.5rem;
+}
+
+.rsvp .card {
+  border-radius: 20px;
+  background-color: var(--marron);
+  color: var(--gold);
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+}
+
+.rsvp h2 {
+  font-family: 'Crimson Text';
+  color: var(--marron);
+}
+
+.rsvp h5 {
+  color: #333332;;
+  text-align: center ;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+.rsvp [type=text], [type=number], select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #2b4f70;
+  border-radius: 10px;
+}
+
+.rsvp [type=submit] {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 3rem;
+  color: rgb(28, 27, 31);
+  background-color: #dbbe66;
+  font-family: 'Crimson Text' ;
+  box-shadow: var(--shadow) ;
+}
+
+
+.rsvp [type=submit]:hover {
+  transform: scale(0.9);
+  transition: 0.2s linear;
+  background-color: #dab74f;
+
+}
+
+/* Message */
+
+.message {
+  padding: 5rem 1.5rem;
+  background-color: var(--marron);
+}
+
+
+.message .mycard {
+  padding: 1.5rem;
+  background-color: #3b1f1f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+}
+
+.message h1 {
+  font-family: 'Crimson Text';
+  color: var(--gold);
+}
+
+.message form {
+  margin-bottom: 1.2rem;
+}
+
+.message label {
+  color: var(--gold);
+}
+
+.message input[type="text"],
+textarea {
+  width: 100%;
+  padding: o.5rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.message .btn {
+  background-color: #dbbe66;
+  color: rgb(28, 27, 31);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.message .btn:hover {
+  transform: scale(0.9);
+  transition: 0.2s linear;
+  background-color: #dab74f;
+}
+
+.message #messageDisplay {
+  margin-top: 1.5rem;
+}
+
+.message .card-body {
+  background-color: #f9f9f9;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.message .card-body .text-date {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.message .card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.message .card-body .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  padding: 1.5rem;
+  background-color: #333;
+  color: #ccc;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}
+
+.audio-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+
+
+
+
+/* Media Query */
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 80%;
+  }
+  .simply-countdown>.simply-section{
+    padding: 36px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  .hero img {
+    margin: 2rem;
+  }
+
+  .simply-countdown>.simply-section{
+    padding: 30px;
+    margin: 5px;
+  }
+  .mynavbar .navbar-nav {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  iframe {
+    width: 80%;
+    height: 80%
+  }
+  .info .alamat {
+  padding-top: 1.5rem;
+  }
+  .gallery {
+    padding: 5rem 5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 65%;
+  }
+  h1{
+    font-size: 65%;
+ }
+  .simply-countdown>.simply-section {
+    padding: 25px;
+    margin: 3px;
+  }
+}
