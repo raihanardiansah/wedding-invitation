@@ -90,18 +90,16 @@ body {
   font-size: 1rem;
 }
 
-.home h2 {
+.home h1 {
   font-family:'Crimson Text';
-  font-size: 3rem;
   color: var(--gold);
 }
 
 .home p {
   color: rgb(206, 206, 206);
 }
-.home h4 {
+.home h2 {
   font-family:'Crimson Text';
-  font-size: 2rem;
   color: var(--gold);
 }
 
@@ -112,7 +110,6 @@ body {
 }
 .info h2{
   font-family:'Crimson Text';
-  /* color: #1A2647; */
   color: var(--marron);
 }
 .info .alamat {
@@ -129,7 +126,7 @@ body {
 .info .btn-bd-primary:hover {
   transform: scale(0.9);
   transition: 0.2s linear;
-  background-color: #703232;
+  background-color: #381818;
   color: #ffffff;
   z-index: 1;
 }
@@ -173,7 +170,8 @@ body {
   border-radius: 20px;
   background-color: var(--marron);
   color: var(--gold);
-  padding: 1.5rem;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
 }
 
 .rsvp h2 {
@@ -185,16 +183,13 @@ body {
   color: #333332;;
   text-align: center ;
   margin-top: 0.8rem;
-  font-family: 'Lucida Sans';
+  font-size: 1rem;
 }
-.rsvp input[type=text], [type=number], select {
+.rsvp [type=text], [type=number], select {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
+  padding: 0.7rem;
   border: 1px solid #2b4f70;
   border-radius: 20px;
-  box-sizing: border-box;
 }
 
 .rsvp [type=submit] {
@@ -208,8 +203,11 @@ body {
   box-shadow: var(--shadow) ;
 }
 
+
 .rsvp [type=submit]:hover {
-  background-color: rgb(145, 110, 110);
+  transform: scale(0.9);
+  transition: 0.2s linear;
+  background-color: #dab74f;
 
 }
 
@@ -299,7 +297,7 @@ textarea {
 /* Laptop */
 @media (max-width: 992px) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
   .simply-countdown>.simply-section{
     padding: 36px;
@@ -309,7 +307,7 @@ textarea {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 65%;
+    font-size: 70%;
   }
 
   .hero img {
@@ -339,16 +337,13 @@ textarea {
 /* Mobile */
 @media (max-width: 576px) {
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
   h1{
-    font-size: 60%;
+    font-size: 65%;
  }
   .simply-countdown>.simply-section {
     padding: 25px;
     margin: 3px;
-  .simply-word {
-    font-size: 15px;
-  }
   }
 }
