@@ -73,6 +73,16 @@ body {
   font-family:'Crimson Text'
 }
 
+/* Navbar close button */
+.navbar-toggler {
+  color: #ffffff;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 
 /* Home */
 .couple img {
@@ -220,13 +230,14 @@ body {
 
 
 .message .mycard {
+  margin-top: 3rem;
   padding: 1.5rem;
   background-color: #3b1f1f;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 1.5rem;
 }
 
-.message h1 {
+.message h2 {
   font-family: 'Crimson Text';
   color: var(--gold);
 }
@@ -305,6 +316,7 @@ textarea {
   font-size: 0.8rem;
 }
 
+/* Audio */
 .audio-icon-wrapper {
   width: 3rem;
   height: 3rem;
@@ -331,7 +343,7 @@ textarea {
 /* Laptop */
 @media (max-width: 992px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
   .simply-countdown>.simply-section{
     padding: 36px;
@@ -341,7 +353,7 @@ textarea {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 
   .hero img {
@@ -371,10 +383,10 @@ textarea {
 /* Mobile */
 @media (max-width: 576px) {
   html {
-    font-size: 65%;
+    font-size: 70%;
   }
   h1{
-    font-size: 65%;
+    font-size: 70%;
  }
   .simply-countdown>.simply-section {
     padding: 25px;

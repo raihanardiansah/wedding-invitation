@@ -21,6 +21,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
 
+  <!-- Icon Navbar Close Button -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta3/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Style CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -228,7 +231,11 @@
 
   <section id="message" class="message">
     <div class="container">
-      <h1 class="text-center mb-4">Message</h1>
+      <div class="row mt-4">
+        <div class="text-center">
+          <h2>Message</h2>
+        </div>
+      </div>
       <div class="row justify-content-center">
         <div class="container mycard">
           <form id="messageForm">
@@ -278,7 +285,7 @@
 
     <div class="audio-icon-wrapper">
       <a onclick="togglePlayPause()">
-        <i id="playPauseIcon" class="bi bi-play-circle"></i>
+        <i id="playPauseIcon" class="bi bi-pause-circle"></i>
       </a>
     </div>
   </div>
